@@ -10,7 +10,7 @@ op = bemoptions('sim','ret','interp','curv','waitbar',0);
 %%Choosing incidence directions
 
 kListGenerating = [1,0,0;1,1,1;1,1,0]; %incidence directions, wavevector format
-kList = kVectorHelp(kListGenerating,true,true,false)
+kList = kVectorHelp(kListGenerating,true,true,true)
 numOfDir = length(kList)
 
 %%Generating plane waves
@@ -36,7 +36,7 @@ if contains(mfilePath,'LiveEditorEvaluationHelper')
 end
 [path, ~, ~] = fileparts(mfilePath);
 
-file =  [path,'']; %add the path to your file here relative to the working path
+file =  [path,'/FILENAME.stl']; %add the path to your .stl file here relative to the working path
 
 [F,V] = stlreader(file);
 
