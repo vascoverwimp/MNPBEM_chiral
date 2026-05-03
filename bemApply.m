@@ -9,7 +9,11 @@ V = V*scalefactor;
 
 
 op = bemoptions('sim','ret','interp','curv','waitbar',0);
-epstab = {epsconst(nen^2), epstable('goldMcPeak.dat')};
+
+%providing the dielectrical function for the surrounding medium, and the particle.
+%if you wish to use a different dielectrical function (because the particle is not gold for example),
+%then place the correct table in .dat form in the folder Material/@epstable/
+epstab = {epsconst(nen^2), epstable('goldMcPeak.dat')}; 
 
 p = particle(V,F);
 p = flipfaces( p );
@@ -26,7 +30,6 @@ bem = bemsolver(p,op);
 
 multiWaitbar('BEM solver', 0, 'Color','g');
 
-tic
 for ien = 1:length(enei)
     for iEx = 1:nExc
         % Use cell indexing {iEx}, which keeps method binding
@@ -37,4 +40,3 @@ for ien = 1:length(enei)
     multiWaitbar('BEM solver', ien/numel(enei));
 end
 multiWaitbar('BEM solver','Close');
-time = toc;

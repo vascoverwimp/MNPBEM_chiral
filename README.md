@@ -7,6 +7,8 @@ From our experience with the toolbox it appears that there exist no "standard" a
 
 As an alternative to MNPBEM, and especially for the study of dielectric nanoparticles, you can use [nanobem](https://github.com/uhohenester/nanobem22). Nanobem is a Matlab toolbox for the solution of Maxwell's equations for metallic and dielectric nanoparticles using a Galerkin boundary element method (BEM) approach.
 
+This toolbox has been provided with an additional framework by Vasco Verwimp to simplify the acquisition of the chiroptical properties of a plasmonic metal nanoparticle.
+
 ## **Reference and Download**
 
 When publishing results obtained with the MNPBEM toolbox, we ask you to cite one of the following papers:
