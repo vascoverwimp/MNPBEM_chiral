@@ -10,7 +10,7 @@ op = bemoptions('sim','ret','interp','curv','waitbar',0);
 %%Choosing incidence directions
 
 kListGenerating = [1,0,0;1,1,1;1,1,0]; %incidence directions, wavevector format
-kList = kVectorHelp(kListGenerating,true,true,true)
+kList = wavevectorHelper(kListGenerating,true,true,true)
 numOfDir = length(kList)
 
 %%Generating plane waves
@@ -19,7 +19,7 @@ exc1 = cell(length(kList),1); % Creates a 2x num of kvectors empty cell array
 
 for j =1:length(kList)
 
-    [ERCP,ELCP,k] = circular_planewave(kList(j,:));
+    [ERCP,ELCP,k] = circularPlanewave(kList(j,:));
     
     pol = [ELCP;ERCP];
     dir = [k;k];

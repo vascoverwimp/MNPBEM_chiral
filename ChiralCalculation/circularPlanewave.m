@@ -1,4 +1,4 @@
-function [ERCP, ELCP,k] = circular_planewave(k)
+function [ERCP, ELCP,k] = circularPlanewave(k)
 %%Helper script that provides LCP and RCP planar waves when given incidence directions
     % Input: k - 3x1 or 1x3 propagation vector
     % Output: ERCP - 3x1 RCP electric field
